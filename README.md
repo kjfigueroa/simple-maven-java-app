@@ -33,3 +33,9 @@ Then, this could be for:
 4. Reliability
 
 > Why `eclipse-temuring`, because its have a trusted JDK (widely used in enterprises). And why `Alpine`, because is intended to be just a build container.
+
+## How to
+
+```sh
+ Kevin T-1 [~/simple-maven-java-app]$ docker run --rm -it -v m2:/root/.m2 -v $(pwd):/app -p 3000:8080 maven:3.9.12-eclipse-temurin-21-alpine mvn spring-boot:run -f app/pom.xml
+```
